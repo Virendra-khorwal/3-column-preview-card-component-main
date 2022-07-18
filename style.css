@@ -1,0 +1,90 @@
+:root {
+
+    /* Colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --color-para: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.heading {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--light-gray);
+}
+
+p {
+    color: var(--color-para);
+}
+
+button {
+    background-color: var(--light-gray);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25rem);
+    justify-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.grid-col {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.col-1 {
+    background-color: var(--bright-orange);
+}
+
+.col-1 button {
+    color: var(--bright-orange);
+}
+
+.col-2 {
+    background-color: var(--dark-cyan);
+}
+
+.col-2 button {
+    color: var(--dark-cyan);
+}
+
+.col-3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.col-3 button {
+    color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 375px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
